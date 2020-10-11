@@ -16,6 +16,13 @@ namespace Vidly.Controllers
             var movie = new Movie() { name = "Avengers" };
             return View(movie);
         }
+        // GET: Movies/Random
+        public ActionResult ByReleaseDate(int year, int month)
+        {
+            return Content(year + "/" + month);
+        }
+        
+        /*
         // GET: Movies/Edit
         public ActionResult Edit(int id)
         {
@@ -33,5 +40,6 @@ namespace Vidly.Controllers
             }
             return Content(string.Format("pageIndex={0}&sortBy={1}",pageIndex,sortBy));
         }
+        */
     }
 }
