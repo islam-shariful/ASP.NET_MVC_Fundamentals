@@ -16,6 +16,8 @@ namespace Vidly.Controllers
             var movie = new Movie() { name = "Avengers" };
             return View(movie);
         }
+
+        [Route("movies/released/{year:regex(\\d{4})}/{month:regex(\\d{2})}")]
         // GET: Movies/Random
         public ActionResult ByReleaseDate(int year, int month)
         {
